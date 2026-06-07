@@ -4,9 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Chemise blanche homme - Boutique MBOUP</title>
+    
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@400;700;900&display=swap" rel="stylesheet">
 </head>
 <body>
 
@@ -17,19 +18,21 @@
                     <img src="images/logo.png" alt="Boutique MBOUP" class="logo-img">
                 </a>
             </div>
+            
             <input type="checkbox" id="menu-toggle" class="menu-checkbox">
             <label for="menu-toggle" class="menu-label">
                 <i class="fas fa-bars"></i>
             </label>
+            
             <nav class="nav">
                 <ul class="nav-menu">
                     <li><a href="index.html">Accueil</a></li>
                     <li class="dropdown">
                         <a href="#">Collections <i class="fas fa-chevron-down"></i></a>
                         <ul class="dropdown-menu">
-                            <li><a href="homme.html">Homme</a></li>
-                            <li><a href="femme.html">Femme</a></li>
-                            <li><a href="enfant.html">Enfant</a></li>
+                            <li><a href="collections-homme.html">Homme</a></li>
+                            <li><a href="collections-femme.html">Femme</a></li>
+                            <li><a href="collections-enfant.html">Enfant</a></li>
                         </ul>
                     </li>
                     <li><a href="a-propos.html">À propos</a></li>
@@ -40,26 +43,114 @@
     </header>
 
     <main>
-        <div class="container product-detail">
-            <div class="product-detail-image">
-                <img src="images/chemise-blanche.jpg" alt="Chemise blanche homme">
+        <section class="product-detail">
+            <div class="container">
+                <div class="product-detail-grid">
+                    <!-- GALERIE STATIQUE AVEC HOVER CSS ET VARIANTES COULEURS -->
+                    <div class="product-gallery">
+                        <div class="product-gallery-main">
+                            <img src="images/chemise-blanche-main.jpg" alt="Chemise blanche homme" id="mainImage">
+                        </div>
+                        <div class="thumbnail-grid">
+                            <img src="images/chemise-blanche-main.jpg" class="thumbnail" onclick="changeImage(this.src)">
+                            <img src="images/chemise-blanche-dos.jpg" class="thumbnail" onclick="changeImage(this.src)">
+                            <img src="images/chemise-blanche-detail.jpg" class="thumbnail" onclick="changeImage(this.src)">
+                        </div>
+                    </div>
+
+                    <div class="product-info">
+                        <h1>Chemise blanche homme</h1>
+                        <div class="product-price-large">25 000 FCFA</div>
+                        
+                        <!-- TAILLES -->
+                        <div class="product-sizes">
+                            <h4>Tailles disponibles :</h4>
+                            <div class="size-buttons">
+                                <input type="radio" name="size" id="size-s" class="size-radio" hidden>
+                                <label for="size-s" class="size-btn">S</label>
+                                
+                                <input type="radio" name="size" id="size-m" class="size-radio" hidden>
+                                <label for="size-m" class="size-btn">M</label>
+                                
+                                <input type="radio" name="size" id="size-l" class="size-radio" hidden>
+                                <label for="size-l" class="size-btn">L</label>
+                                
+                                <input type="radio" name="size" id="size-xl" class="size-radio" hidden>
+                                <label for="size-xl" class="size-btn">XL</label>
+                                
+                                <input type="radio" name="size" id="size-xxl" class="size-radio" hidden>
+                                <label for="size-xxl" class="size-btn">XXL</label>
+                            </div>
+                        </div>
+                        
+                        <!-- COULEURS / VARIANTES avec pastilles cliquables changeant l'image -->
+                        <div class="product-colors">
+                            <h4>Couleurs :</h4>
+                            <div class="color-buttons">
+                                <input type="radio" name="color" id="color-white" class="color-radio" checked>
+                                <label for="color-white" class="color-label" style="background-color: #fff; border: 1px solid #ddd;" onclick="changeImage('images/chemise-blanche-main.jpg')"></label>
+                                
+                                <input type="radio" name="color" id="color-blue" class="color-radio">
+                                <label for="color-blue" class="color-label color-blue" onclick="changeImage('images/chemise-bleue.jpg')"></label>
+                                
+                                <input type="radio" name="color" id="color-black" class="color-radio">
+                                <label for="color-black" class="color-label color-black" onclick="changeImage('images/chemise-noire.jpg')"></label>
+                            </div>
+                        </div>
+                        
+                        <!-- DESCRIPTION DETAILLÉE -->
+                        <div class="product-description">
+                            <h4>Description :</h4>
+                            <p>Chemise blanche en coton premium, coupe slim, idéale pour le bureau ou les occasions spéciales. Matière respirante, facile d'entretien. Finitions soignées, boutons nacrés.</p>
+                            <p><strong>Matière :</strong> 100% Coton</p>
+                            <p><strong>Entretien :</strong> Lavage machine 30°, repassage modéré</p>
+                            <p><strong>Coupe :</strong> Slim, taille normale</p>
+                        </div>
+                        
+                        <!-- BOUTONS D'ACTION -->
+                        <div class="product-actions">
+                            <a href="https://wa.me/221781234567?text=Bonjour%2C%20je%20veux%20commander%20la%20Chemise%20blanche%20homme%20(25%20000%20FCFA)" 
+                               class="btn-whatsapp" target="_blank">
+                                <i class="fab fa-whatsapp"></i> Commander via WhatsApp
+                            </a>
+                            <a href="mailto:contact@boutiquemboup.sn?subject=Demande%20de%20prix%20-%20Chemise%20blanche%20homme" 
+                               class="btn-secondary">
+                                Demander le prix / stock
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- PRODUITS SIMILAIRES -->
+                <div class="similar-products">
+                    <h2 class="section-title">Produits similaires</h2>
+                    <div class="products-grid">
+                        <div class="product-card">
+                            <img src="images/chemise-bleue.jpg" alt="Chemise bleue">
+                            <h3>Chemise bleue</h3>
+                            <div class="product-price">25 000 FCFA</div>
+                            <a href="produit-homme-chemise-bleue.html" class="product-link">Voir les détails →</a>
+                        </div>
+                        <div class="product-card">
+                            <img src="images/chemise-noire.jpg" alt="Chemise noire">
+                            <h3>Chemise noire</h3>
+                            <div class="product-price">25 000 FCFA</div>
+                            <a href="produit-homme-chemise-noire.html" class="product-link">Voir les détails →</a>
+                        </div>
+                        <div class="product-card">
+                            <img src="images/costume-homme.jpg" alt="Costume complet">
+                            <h3>Costume complet</h3>
+                            <div class="product-price">85 000 FCFA</div>
+                            <a href="produit-homme-costume.html" class="product-link">Voir les détails →</a>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="product-detail-info">
-                <h1>Chemise blanche homme</h1>
-                <p><strong>Description :</strong> Chemise en coton bio, coupe moderne et décontractée. Idéale pour le bureau ou les sorties. Lavable en machine.</p>
-                <p><strong>Tailles disponibles :</strong> S, M, L, XL, XXL</p>
-                <p><strong>Couleurs :</strong> Blanc, Bleu clair, Noir</p>
-                <p><strong>Prix :</strong> Nous consulter</p>
-                <a href="https://wa.me/221781234567?text=Bonjour%2C%20je%20souhaite%20connaître%20le%20prix%20et%20la%20disponibilité%20de%20la%20chemise%20blanche%20homme" 
-                   class="btn-whatsapp" target="_blank">
-                    <i class="fab fa-whatsapp"></i> Demander le prix sur WhatsApp
-                </a>
-                <a href="contact.html" class="btn btn-primary" style="margin-top: 20px; display: inline-block;">Nous contacter</a>
-            </div>
-        </div>
+        </section>
     </main>
 
     <footer class="footer">
+        <!-- Même footer que les autres pages -->
         <div class="container">
             <div class="footer-grid">
                 <div class="footer-col">
@@ -79,9 +170,9 @@
                 <div class="footer-col">
                     <h4>Suivez-nous</h4>
                     <div class="social-links">
-                        <a href="https://instagram.com/votrecompte" target="_blank"><i class="fab fa-instagram"></i></a>
-                        <a href="https://wa.me/221781234567" target="_blank"><i class="fab fa-whatsapp"></i></a>
-                        <a href="https://facebook.com/votrepage" target="_blank"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-whatsapp"></i></a>
+                        <a href="#"><i class="fab fa-facebook"></i></a>
                     </div>
                 </div>
             </div>
@@ -92,5 +183,11 @@
         </div>
     </footer>
 
+    <script>
+        function changeImage(src) {
+            document.getElementById('mainImage').src = src;
+        }
+    </script>
+    <script src="js/main.js"></script>
 </body>
 </html>
