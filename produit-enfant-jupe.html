@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jupe fille - Boutique MBOUP Dakar</title>
+    <meta name="description" content="Jupe fille en coton. Tailles 4 à 12 ans. Idéale pour l'école. Prix : 7 000 FCFA.">
+    
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@400;700;900&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="images/logo.png" alt="Boutique MBOUP" class="logo-img">
+                </a>
+            </div>
+            <input type="checkbox" id="menu-toggle" class="menu-checkbox">
+            <label for="menu-toggle" class="menu-label">
+                <i class="fas fa-bars"></i>
+            </label>
+            <nav class="nav">
+                <ul class="nav-menu">
+                    <li><a href="index.html">Accueil</a></li>
+                    <li class="dropdown">
+                        <a href="#">Collections <i class="fas fa-chevron-down"></i></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="collections-homme.html">Homme</a></li>
+                            <li><a href="collections-femme.html">Femme</a></li>
+                            <li><a href="collections-enfant.html">Enfant</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="a-propos.html">À propos</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="container product-detail">
+            <div class="product-gallery">
+                <div class="main-image">
+                    <img src="images/enfant-jupe-1.jpg" alt="Jupe fille" id="mainProductImage">
+                </div>
+                <div class="thumbnails">
+                    <img src="images/enfant-jupe-1.jpg" alt="Jupe face" class="thumb" onmouseover="document.getElementById('mainProductImage').src=this.src">
+                    <img src="images/enfant-jupe-2.jpg" alt="Jupe dos" class="thumb" onmouseover="document.getElementById('mainProductImage').src=this.src">
+                </div>
+            </div>
+            
+            <div class="product-info">
+                <h1>Jupe fille</h1>
+                <div class="product-price-large">7 000 FCFA</div>
+                
+                <div style="margin: 20px 0;">
+                    <strong>Couleurs :</strong>
+                    <div class="color-selector" style="display: flex; gap: 12px; margin-top: 10px;">
+                        <input type="radio" name="color" id="jupe-rose" class="color-radio" checked>
+                        <label for="jupe-rose" class="color-label" style="background: #ff69b4;"></label>
+                        
+                        <input type="radio" name="color" id="jupe-bleu" class="color-radio">
+                        <label for="jupe-bleu" class="color-label color-bleu"></label>
+                        
+                        <input type="radio" name="color" id="jupe-noir" class="color-radio">
+                        <label for="jupe-noir" class="color-label color-noir"></label>
+                    </div>
+                </div>
+                
+                <div>
+                    <strong>Tailles :</strong>
+                    <div class="sizes">
+                        <button class="size-btn">4 ans</button>
+                        <button class="size-btn">6 ans</button>
+                        <button class="size-btn active">8 ans</button>
+                        <button class="size-btn">10 ans</button>
+                        <button class="size-btn">12 ans</button>
+                    </div>
+                </div>
+                
+                <div class="product-description">
+                    <h3>Description</h3>
+                    <p>Jupe élastique confortable. Parfaite pour l'école ou les sorties. Plis plats, finition soignée.</p>
+                    <p><strong>Matière :</strong> 100% coton<br>
+                    <strong>Entretien :</strong> Lavage machine 30°C<br>
+                    <strong>Coupe :</strong> Taille élastique, longueur genou</p>
+                </div>
+                
+                <div class="product-actions">
+                    <a href="https://wa.me/221781234567?text=Bonjour%2C%20je%20souhaite%20commander%20la%20Jupe%20fille%20(7%20000%20FCFA)%20en%20taille%208%20ans" 
+                       class="btn-whatsapp" target="_blank">
+                        <i class="fab fa-whatsapp"></i> Commander via WhatsApp
+                    </a>
+                    <a href="mailto:contact@boutiquemboup.sn?subject=Commande%20Jupe%20fille" class="btn btn-primary">Demander le prix / stock</a>
+                </div>
+            </div>
+        </div>
+        
+        <section class="similar-products">
+            <div class="container">
+                <h2 class="section-title">Produits similaires</h2>
+                <div class="products-grid">
+                    <div class="product-card">
+                        <img src="images/enfant-robe-wax.jpg" alt="Robe wax fille">
+                        <h3>Robe wax fille</h3>
+                        <div class="product-price">10 000 FCFA</div>
+                        <a href="produit-enfant-robe-wax.html" class="product-link">Voir les détails</a>
+                    </div>
+                    <div class="product-card">
+                        <img src="images/enfant-ensemble.jpg" alt="Ensemble enfant">
+                        <h3>Ensemble enfant</h3>
+                        <div class="product-price">12 500 FCFA</div>
+                        <a href="produit-enfant-ensemble.html" class="product-link">Voir les détails</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h4>Boutique MBOUP</h4>
+                    <p>Habillement tendance pour toute la famille à Dakar.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Contact</h4>
+                    <p><i class="fas fa-phone"></i> <a href="tel:+221781234567">+221 78 123 45 67</a></p>
+                    <p><i class="fab fa-whatsapp"></i> <a href="https://wa.me/221781234567" target="_blank">WhatsApp</a></p>
+                    <p><i class="fas fa-envelope"></i> <a href="mailto:contact@boutiquemboup.sn">contact@boutiquemboup.sn</a></p>
+                </div>
+                <div class="footer-col">
+                    <h4>Adresse</h4>
+                    <p><i class="fas fa-map-marker-alt"></i> 123 Rue de la Mode, Dakar Plateau, Sénégal</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Suivez-nous</h4>
+                    <div class="social-links">
+                        <a href="https://instagram.com/votrecompte" target="_blank"><i class="fab fa-instagram"></i></a>
+                        <a href="https://wa.me/221781234567" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                        <a href="https://facebook.com/votrepage" target="_blank"><i class="fab fa-facebook"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Boutique MBOUP - Tous droits réservés</p>
+                <p><a href="mentions-legales.html">Mentions légales</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const thumbs = document.querySelectorAll('.thumb');
+        const mainImg = document.getElementById('mainProductImage');
+        if(thumbs.length && mainImg) {
+            thumbs.forEach(thumb => {
+                thumb.addEventListener('mouseover', () => {
+                    mainImg.src = thumb.src;
+                });
+            });
+        }
+    </script>
+</body>
+</html>
