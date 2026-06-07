@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Collection Femme - Boutique MBOUP | Mode à Dakar</title>
+    <meta name="description" content="Découvrez notre collection femme : robes wax, tops, jupes et plus. Mode tendance à Dakar.">
+    
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@400;700;900&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="images/logo.png" alt="Boutique MBOUP" class="logo-img">
+                </a>
+            </div>
+            
+            <input type="checkbox" id="menu-toggle" class="menu-checkbox">
+            <label for="menu-toggle" class="menu-label">
+                <i class="fas fa-bars"></i>
+            </label>
+            
+            <nav class="nav">
+                <ul class="nav-menu">
+                    <li><a href="index.html">Accueil</a></li>
+                    <li class="dropdown">
+                        <a href="#">Collections <i class="fas fa-chevron-down"></i></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="collections-homme.html">Homme</a></li>
+                            <li><a href="collections-femme.html" class="active">Femme</a></li>
+                            <li><a href="collections-enfant.html">Enfant</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="a-propos.html">À propos</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="products-page">
+            <div class="container">
+                <h1 class="section-title">Collection Femme</h1>
+                
+                <!-- FILTRES -->
+                <div class="filters">
+                    <div class="filter-group">
+                        <a href="#" class="filter-link active" data-filter="all">Tous</a>
+                        <a href="#" class="filter-link" data-filter="robes">Robes</a>
+                        <a href="#" class="filter-link" data-filter="tops">Tops</a>
+                        <a href="#" class="filter-link" data-filter="jupes">Jupes</a>
+                        <a href="#" class="filter-link" data-filter="boubous-femme">Boubous</a>
+                    </div>
+                </div>
+
+                <div class="products-grid" id="products-grid">
+                    <div class="product-card" data-category="robes">
+                        <div class="product-badge badge-best">Best-seller</div>
+                        <img src="images/selection-femme-1.jpg" alt="Robe wax">
+                        <h3>Robe wax</h3>
+                        <div class="product-price">35 000 FCFA</div>
+                        <p>Collection Femme</p>
+                        <a href="produit-femme-robe-wax.html" class="product-link">Voir les détails →</a>
+                    </div>
+                    
+                    <div class="product-card" data-category="robes">
+                        <div class="product-badge badge-new">Nouveau</div>
+                        <img src="images/robe-soiree.jpg" alt="Robe de soirée">
+                        <h3>Robe de soirée</h3>
+                        <div class="product-price">55 000 FCFA</div>
+                        <p>Collection Femme</p>
+                        <a href="produit-femme-robe-soiree.html" class="product-link">Voir les détails →</a>
+                    </div>
+                    
+                    <div class="product-card" data-category="tops">
+                        <img src="images/top-crop.jpg" alt="Top crop">
+                        <h3>Top crop</h3>
+                        <div class="product-price">12 000 FCFA</div>
+                        <p>Collection Femme</p>
+                        <a href="produit-femme-top-crop.html" class="product-link">Voir les détails →</a>
+                    </div>
+                    
+                    <div class="product-card" data-category="jupes">
+                        <img src="images/jupe-patte.jpg" alt="Jupe patte">
+                        <h3>Jupe patte</h3>
+                        <div class="product-price">22 000 FCFA</div>
+                        <p>Collection Femme</p>
+                        <a href="produit-femme-jupe-patte.html" class="product-link">Voir les détails →</a>
+                    </div>
+                    
+                    <div class="product-card" data-category="boubous-femme">
+                        <div class="product-badge badge-promo">Promo</div>
+                        <img src="images/boubou-femme.jpg" alt="Boubou femme">
+                        <h3>Boubou femme</h3>
+                        <div class="product-price">40 000 FCFA <span style="text-decoration: line-through;">55 000 FCFA</span></div>
+                        <p>Collection Femme</p>
+                        <a href="produit-femme-boubou.html" class="product-link">Voir les détails →</a>
+                    </div>
+                    
+                    <div class="product-card" data-category="robes">
+                        <img src="images/robe-cocktail.jpg" alt="Robe cocktail">
+                        <h3>Robe cocktail</h3>
+                        <div class="product-price">45 000 FCFA</div>
+                        <p>Collection Femme</p>
+                        <a href="produit-femme-robe-cocktail.html" class="product-link">Voir les détails →</a>
+                    </div>
+                </div>
+
+                <div class="pagination">
+                    <a href="#" class="active">1</a>
+                    <a href="#">2</a>
+                    <a href="#">3</a>
+                    <a href="#">→</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="cta-whatsapp">
+            <div class="container">
+                <h2>Une question sur notre collection Femme ?</h2>
+                <p>Contactez-nous sur WhatsApp pour connaître les prix et disponibilités</p>
+                <a href="https://wa.me/221781234567?text=Bonjour%2C%20je%20suis%20int%C3%A9ress%C3%A9%20par%20la%20collection%20femme" 
+                   class="btn-whatsapp-large" target="_blank">
+                    <i class="fab fa-whatsapp"></i> Nous contacter sur WhatsApp
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h4>Boutique MBOUP</h4>
+                    <p>Habillement tendance pour toute la famille à Dakar.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Contact</h4>
+                    <p><i class="fas fa-phone"></i> <a href="tel:+221781234567">+221 78 123 45 67</a></p>
+                    <p><i class="fab fa-whatsapp"></i> <a href="https://wa.me/221781234567" target="_blank">WhatsApp</a></p>
+                    <p><i class="fas fa-envelope"></i> <a href="mailto:contact@boutiquemboup.sn">contact@boutiquemboup.sn</a></p>
+                </div>
+                <div class="footer-col">
+                    <h4>Adresse</h4>
+                    <p><i class="fas fa-map-marker-alt"></i> 123 Rue de la Mode, Dakar Plateau, Sénégal</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Suivez-nous</h4>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-whatsapp"></i></a>
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Boutique MBOUP - Tous droits réservés</p>
+                <p><a href="mentions-legales.html">Mentions légales</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
