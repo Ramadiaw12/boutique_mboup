@@ -3,363 +3,177 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Collection Homme - Élégance moderne</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: #f5f5f5;
-            color: #1e1e1e;
-            padding: 40px 20px;
-        }
-
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            background: white;
-            border-radius: 24px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
-            overflow: hidden;
-            padding: 30px;
-        }
-
-        h1 {
-            font-size: 2.5rem;
-            font-weight: 600;
-            letter-spacing: -0.5px;
-        }
-
-        .subtitle {
-            color: #5a5a5a;
-            margin-top: 8px;
-            border-left: 4px solid #b87c4f;
-            padding-left: 16px;
-            font-size: 1rem;
-        }
-
-        /* Navigation catégories */
-        .categories {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 12px;
-            margin: 30px 0 20px;
-            border-bottom: 1px solid #e0e0e0;
-            padding-bottom: 15px;
-        }
-
-        .cat-link {
-            text-decoration: none;
-            color: #2c2c2c;
-            font-weight: 500;
-            padding: 8px 16px;
-            border-radius: 40px;
-            transition: 0.2s;
-            background: #f0f0f0;
-        }
-
-        .cat-link:hover {
-            background: #b87c4f;
-            color: white;
-        }
-
-        .stock-info {
-            font-size: 0.9rem;
-            color: #666;
-            margin-bottom: 32px;
-            border-top: 1px solid #eee;
-            padding-top: 16px;
-        }
-
-        /* Grille produits */
-        .products-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
-            gap: 30px;
-            margin: 20px 0 40px;
-        }
-
-        .product-card {
-            background: #fff;
-            border-radius: 20px;
-            overflow: hidden;
-            transition: transform 0.2s ease, box-shadow 0.2s;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
-            border: 1px solid #ececec;
-        }
-
-        .product-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 20px 25px -12px rgba(0,0,0,0.15);
-        }
-
-        /* ESPACE PHOTO : zone dédiée à l'insertion des images */
-        .photo-slot {
-            background: #faf6f0;
-            height: 240px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            border-bottom: 1px solid #eee;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .photo-placeholder {
-            text-align: center;
-            color: #b87c4f;
-            font-size: 0.8rem;
-            background: #f1ede8;
-            width: 100%;
-            height: 100%;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            gap: 8px;
-        }
-
-        .photo-placeholder span:first-child {
-            font-size: 2.5rem;
-            opacity: 0.6;
-        }
-
-        /* Pour quand vous insérez une vraie image */
-        .product-img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            display: block;
-        }
-
-        .product-info {
-            padding: 18px 16px 20px;
-        }
-
-        .badge {
-            display: inline-block;
-            font-size: 0.7rem;
-            font-weight: 600;
-            padding: 4px 10px;
-            border-radius: 30px;
-            margin-bottom: 12px;
-        }
-
-        .badge-new {
-            background: #2c7a4d;
-            color: white;
-        }
-
-        .badge-promo {
-            background: #c93a3a;
-            color: white;
-        }
-
-        .product-title {
-            font-size: 1.25rem;
-            font-weight: 600;
-            margin-bottom: 6px;
-        }
-
-        .product-desc {
-            font-size: 0.8rem;
-            color: #6b6b6b;
-            margin: 8px 0 12px;
-            line-height: 1.4;
-        }
-
-        .price {
-            font-weight: 700;
-            font-size: 1.2rem;
-            margin: 12px 0 6px;
-        }
-
-        .old-price {
-            text-decoration: line-through;
-            color: #999;
-            font-size: 0.85rem;
-            font-weight: normal;
-            margin-left: 8px;
-        }
-
-        .price-detail {
-            font-size: 0.7rem;
-            color: #5a5a5a;
-            margin-bottom: 16px;
-        }
-
-        .btn-details {
-            display: inline-block;
-            background: none;
-            border: 1px solid #b87c4f;
-            color: #b87c4f;
-            padding: 8px 16px;
-            border-radius: 30px;
-            text-decoration: none;
-            font-size: 0.8rem;
-            font-weight: 500;
-            transition: 0.2s;
-        }
-
-        .btn-details:hover {
-            background: #b87c4f;
-            color: white;
-        }
-
-        hr {
-            margin: 20px 0;
-            border: none;
-            border-top: 1px solid #eaeaea;
-        }
-
-        footer {
-            text-align: center;
-            font-size: 0.75rem;
-            color: #aaa;
-            margin-top: 20px;
-        }
-    </style>
+    <title>Collection Homme 2026 - Boutique MBOUP | Dakar</title>
+    <meta name="description" content="Découvrez notre collection homme : chemises, boubous, costumes et plus. Mode tendance à Dakar.">
+    
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@400;700;900&display=swap" rel="stylesheet">
 </head>
 <body>
-<div class="container">
-    <h1>Collection Homme</h1>
-    <div class="subtitle">Élégance et qualité pour l'homme moderne</div>
 
-    <!-- Liens corrigés (ancres fictives mais prêtes pour navigation réelle) -->
-    <div class="categories">
-        <a href="#" class="cat-link" data-filter="all">Tous</a>
-        <a href="#" class="cat-link" data-filter="chemises">Chemises</a>
-        <a href="#" class="cat-link" data-filter="pantalons">Pantalons</a>
-        <a href="#" class="cat-link" data-filter="costumes">Costumes</a>
-        <a href="#" class="cat-link" data-filter="boubous">Boubous</a>
-        <a href="#" class="cat-link" data-filter="accessoires">Accessoires</a>
-    </div>
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="images/logo.png" alt="Boutique MBOUP" class="logo-img">
+                </a>
+            </div>
+            
+            <input type="checkbox" id="menu-toggle" class="menu-checkbox">
+            <label for="menu-toggle" class="menu-label">
+                <i class="fas fa-bars"></i>
+            </label>
+            
+            <nav class="nav">
+                <ul class="nav-menu">
+                    <li><a href="index.html">Accueil</a></li>
+                    <li class="dropdown">
+                        <a href="#">Collections <i class="fas fa-chevron-down"></i></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="collections-homme.html" class="active">Homme</a></li>
+                            <li><a href="collections-femme.html">Femme</a></li>
+                            <li><a href="collections-enfant.html">Enfant</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="a-propos.html">À propos</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
 
-    <div class="stock-info">✨ 6 articles disponibles</div>
+    <main>
+        <section class="products-page">
+            <div class="container">
+                <h1 class="section-title">Collection Homme 2026</h1>
+                
+                <!-- FILTRES VISUELS -->
+                <div class="filters">
+                    <div class="filter-group">
+                        <a href="#" class="filter-link active" data-filter="all">Tous</a>
+                        <a href="#" class="filter-link" data-filter="chemises">Chemises</a>
+                        <a href="#" class="filter-link" data-filter="boubous">Boubous</a>
+                        <a href="#" class="filter-link" data-filter="costumes">Costumes</a>
+                        <a href="#" class="filter-link" data-filter="pantalons">Pantalons</a>
+                    </div>
+                </div>
 
-    <!-- Grille produits : chaque fiche laisse un espace visible pour l'insertion des photos -->
-    <div class="products-grid">
-        
-        <!-- 1. Chemise blanche -->
-        <div class="product-card" data-category="chemises">
-            <div class="photo-slot">
-                <!-- ICI : INSÉREZ VOTRE PHOTO (remplacer le contenu par <img class="product-img" src="votre-image.jpg" alt="Chemise blanche">) -->
-                <div class="photo-placeholder">
-                    <span>🖼️</span>
-                    <span>Espace photo<br>Chemise blanche</span>
+                <div class="products-grid" id="products-grid">
+                    <!-- Produit 1 -->
+                    <div class="product-card" data-category="chemises">
+                        <div class="product-badge badge-new">Nouveau</div>
+                        <img src="images/selection-homme-1.jpg" alt="Chemise blanche homme">
+                        <h3>Chemise blanche</h3>
+                        <div class="product-price">25 000 FCFA</div>
+                        <p>Collection Homme 2026</p>
+                        <a href="produit-homme-chemise-blanche.html" class="product-link">Voir les détails →</a>
+                    </div>
+                    
+                    <!-- Produit 2 -->
+                    <div class="product-card" data-category="boubous">
+                        <div class="product-badge badge-best">Best-seller</div>
+                        <img src="images/selection-homme-2.jpg" alt="Boubou cérémonie">
+                        <h3>Boubou cérémonie</h3>
+                        <div class="product-price">45 000 FCFA</div>
+                        <p>Collection Homme</p>
+                        <a href="produit-homme-boubou.html" class="product-link">Voir les détails →</a>
+                    </div>
+                    
+                    <!-- Produit 3 -->
+                    <div class="product-card" data-category="costumes">
+                        <div class="product-badge badge-promo">Promo</div>
+                        <img src="images/costume-homme.jpg" alt="Costume 3 pièces">
+                        <h3>Costume 3 pièces</h3>
+                        <div class="product-price">85 000 FCFA <span style="text-decoration: line-through;">120 000 FCFA</span></div>
+                        <p>Collection Homme</p>
+                        <a href="produit-homme-costume.html" class="product-link">Voir les détails →</a>
+                    </div>
+                    
+                    <!-- Produit 4 -->
+                    <div class="product-card" data-category="pantalons">
+                        <img src="images/pantalon-homme.jpg" alt="Pantalon chino">
+                        <h3>Pantalon chino</h3>
+                        <div class="product-price">18 000 FCFA</div>
+                        <p>Collection Homme</p>
+                        <a href="produit-homme-pantalon.html" class="product-link">Voir les détails →</a>
+                    </div>
+                    
+                    <!-- Produit 5 -->
+                    <div class="product-card" data-category="chemises">
+                        <img src="images/chemise-wax-homme.jpg" alt="Chemise wax">
+                        <h3>Chemise wax</h3>
+                        <div class="product-price">30 000 FCFA</div>
+                        <p>Collection Homme</p>
+                        <a href="produit-homme-chemise-wax.html" class="product-link">Voir les détails →</a>
+                    </div>
+                    
+                    <!-- Produit 6 -->
+                    <div class="product-card" data-category="boubous">
+                        <img src="images/boubou-court-homme.jpg" alt="Boubou court">
+                        <h3>Boubou court</h3>
+                        <div class="product-price">35 000 FCFA</div>
+                        <p>Collection Homme</p>
+                        <a href="produit-homme-boubou-court.html" class="product-link">Voir les détails →</a>
+                    </div>
+                </div>
+
+                <!-- PAGINATION -->
+                <div class="pagination">
+                    <a href="#" class="active">1</a>
+                    <a href="#">2</a>
+                    <a href="#">3</a>
+                    <a href="#">→</a>
                 </div>
             </div>
-            <div class="product-info">
-                <div class="badge badge-new">Nouveau</div>
-                <div class="product-title">Chemise blanche</div>
-                <div class="product-desc">Coton bio - Coupe slim</div>
-                <div class="price">25 000 FCFA <span class="price-detail">/ pièce</span></div>
-                <a href="#" class="btn-details">Détails →</a>
-            </div>
-        </div>
+        </section>
 
-        <!-- 2. Jean slim -->
-        <div class="product-card" data-category="pantalons">
-            <div class="photo-slot">
-                <div class="photo-placeholder">
-                    <span>🖼️</span>
-                    <span>Espace photo<br>Jean slim</span>
+        <!-- WHATSAPP CTA -->
+        <section class="cta-whatsapp">
+            <div class="container">
+                <h2>Une question sur notre collection Homme ?</h2>
+                <p>Contactez-nous directement sur WhatsApp pour connaître les prix et disponibilités</p>
+                <a href="https://wa.me/221781234567?text=Bonjour%2C%20je%20suis%20int%C3%A9ress%C3%A9%20par%20la%20collection%20homme" 
+                   class="btn-whatsapp-large" target="_blank">
+                    <i class="fab fa-whatsapp"></i> Nous contacter sur WhatsApp
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h4>Boutique MBOUP</h4>
+                    <p>Habillement tendance pour toute la famille à Dakar.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Contact</h4>
+                    <p><i class="fas fa-phone"></i> <a href="tel:+221781234567">+221 78 123 45 67</a></p>
+                    <p><i class="fab fa-whatsapp"></i> <a href="https://wa.me/221781234567" target="_blank">WhatsApp</a></p>
+                    <p><i class="fas fa-envelope"></i> <a href="mailto:contact@boutiquemboup.sn">contact@boutiquemboup.sn</a></p>
+                </div>
+                <div class="footer-col">
+                    <h4>Adresse</h4>
+                    <p><i class="fas fa-map-marker-alt"></i> 123 Rue de la Mode, Dakar Plateau, Sénégal</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Suivez-nous</h4>
+                    <div class="social-links">
+                        <a href="https://instagram.com/votrecompte" target="_blank"><i class="fab fa-instagram"></i></a>
+                        <a href="https://wa.me/221781234567" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                        <a href="https://facebook.com/votrepage" target="_blank"><i class="fab fa-facebook"></i></a>
+                    </div>
                 </div>
             </div>
-            <div class="product-info">
-                <div class="badge badge-new">Nouveau</div>
-                <div class="product-title">Jean slim</div>
-                <div class="product-desc">Tissu premium - Élastique</div>
-                <div class="price">35 000 FCFA <span class="price-detail">/ pièce</span></div>
-                <a href="#" class="btn-details">Détails →</a>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Boutique MBOUP - Tous droits réservés</p>
+                <p><a href="mentions-legales.html">Mentions légales</a></p>
             </div>
         </div>
-
-        <!-- 3. Boubous -->
-        <div class="product-card" data-category="boubous">
-            <div class="photo-slot">
-                <div class="photo-placeholder">
-                    <span>🖼️</span>
-                    <span>Espace photo<br>Boubou wax</span>
-                </div>
-            </div>
-            <div class="product-info">
-                <div class="badge badge-new">Nouveau</div>
-                <div class="product-title">Boubous</div>
-                <div class="product-desc">Tissu wax - Fait main</div>
-                <div class="price">55 000 FCFA <span class="price-detail">/ pièce</span></div>
-                <a href="#" class="btn-details">Détails →</a>
-            </div>
-        </div>
-
-        <!-- 4. Costume 3 pièces (promo) -->
-        <div class="product-card" data-category="costumes">
-            <div class="photo-slot">
-                <div class="photo-placeholder">
-                    <span>🖼️</span>
-                    <span>Espace photo<br>Costume 3 pièces</span>
-                </div>
-            </div>
-            <div class="product-info">
-                <div class="badge badge-promo">Promo -30%</div>
-                <div class="product-title">Costume 3 pièces</div>
-                <div class="product-desc">Laine - Coupe cintrée</div>
-                <div class="price">85 000 FCFA <span class="old-price">120 000 FCFA</span></div>
-                <div class="price-detail">/ ensemble</div>
-                <a href="#" class="btn-details">Détails →</a>
-            </div>
-        </div>
-
-        <!-- 5. Article exemple supplémentaire : Pantalon chino (pour illustrer complétude) -->
-        <div class="product-card" data-category="pantalons">
-            <div class="photo-slot">
-                <div class="photo-placeholder">
-                    <span>🖼️</span>
-                    <span>Espace photo<br>Pantalon chino</span>
-                </div>
-            </div>
-            <div class="product-info">
-                <div class="badge">Nouveauté</div>
-                <div class="product-title">Pantalon chino</div>
-                <div class="product-desc">Coton stretch - 4 couleurs</div>
-                <div class="price">32 000 FCFA <span class="price-detail">/ pièce</span></div>
-                <a href="#" class="btn-details">Détails →</a>
-            </div>
-        </div>
-
-        <!-- 6. Accessoire (montre / ceinture) pour atteindre 6 articles -->
-        <div class="product-card" data-category="accessoires">
-            <div class="photo-slot">
-                <div class="photo-placeholder">
-                    <span>🖼️</span>
-                    <span>Espace photo<br>Ceinture cuir</span>
-                </div>
-            </div>
-            <div class="product-info">
-                <div class="badge">Accessoire</div>
-                <div class="product-title">Ceinture cuir</div>
-                <div class="product-desc">Cuir pleine fleur - Boucle argentée</div>
-                <div class="price">18 000 FCFA <span class="price-detail">/ pièce</span></div>
-                <a href="#" class="btn-details">Détails →</a>
-            </div>
-        </div>
-    </div>
-
-    <hr>
-    <footer>
-        ⚡ Espaces réservés à vos photos — remplacez chaque .photo-placeholder par &lt;img class="product-img" src="..."&gt;
     </footer>
-</div>
 
-<!-- Petit script pour indiquer comment remplacer facilement les photos (simple rappel) -->
-<script>
-    // Note : Ce script ne fait qu'illustrer la flexibilité.
-    // Dans votre code final, insérez directement les balises <img> dans chaque .photo-slot.
-    console.log("✅ Structure corrigée : liens Chemises, Pantalons, Costumes, Boubous, Accessoires actifs. Place aux photos dans chaque bloc.");
-</script>
+    <script src="js/main.js"></script>
 </body>
 </html>
