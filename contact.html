@@ -2,17 +2,17 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
     <title>Contact - Boutique MBOUP | Dakar</title>
+    <meta name="description" content="Contactez Boutique MBOUP à Dakar. Mode homme, femme et enfant. WhatsApp, téléphone, email et formulaire de contact.">
     
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@400;700;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Playfair+Display:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
 </head>
 <body>
 
     <header class="header">
-        <!-- Même header -->
         <div class="container">
             <div class="logo">
                 <a href="index.html">
@@ -44,42 +44,252 @@
     </header>
 
     <main>
-        <section class="contact-section">
+        <!-- Hero Section Contact -->
+        <section class="contact-hero">
             <div class="container">
-                <h1 class="section-title">Contactez-nous</h1>
-                
-                <div class="contact-grid">
-                    <div class="contact-form">
-                        <h2>Envoyez-nous un message</h2>
-                        <form action="#" method="POST">
-                            <input type="text" name="nom" placeholder="Votre nom" required>
-                            <input type="email" name="email" placeholder="Votre email" required>
-                            <input type="tel" name="telephone" placeholder="Votre téléphone">
-                            <textarea name="message" rows="5" placeholder="Votre message..." required></textarea>
-                            <button type="submit">Envoyer</button>
-                        </form>
-                    </div>
-                    
-                    <div class="contact-info">
-                        <h2>Nos coordonnées</h2>
-                        <p><i class="fas fa-map-marker-alt"></i> 123 Rue de la Mode, Dakar Plateau, Sénégal</p>
-                        <p><i class="fas fa-phone"></i> <a href="tel:+221781234567">+221 78 123 45 67</a></p>
-                        <p><i class="fab fa-whatsapp"></i> <a href="https://wa.me/221781234567" target="_blank">+221 78 123 45 67 (WhatsApp)</a></p>
-                        <p><i class="fas fa-envelope"></i> <a href="mailto:contact@boutiquemboup.sn">contact@boutiquemboup.sn</a></p>
-                        <p><i class="fab fa-instagram"></i> <a href="#">@boutiquemboup</a></p>
-                        <p><i class="fab fa-facebook"></i> <a href="#">Boutique MBOUP</a></p>
-                        
-                        <h3>Horaires d'ouverture</h3>
-                        <p>Lundi - Samedi : 9h - 19h</p>
-                        <p>Dimanche : Fermé</p>
+                <div class="contact-hero-content">
+                    <h1 class="contact-hero-title">Contactez-nous</h1>
+                    <p class="contact-hero-subtitle">Nous sommes à votre écoute pour répondre à toutes vos questions</p>
+                    <div class="contact-hero-decoration">
+                        <span></span>
+                        <i class="fas fa-heart"></i>
+                        <span></span>
                     </div>
                 </div>
             </div>
         </section>
+
+        <!-- Contact Main Section -->
+        <section class="contact-section">
+            <div class="container">
+                <div class="contact-wrapper">
+                    <!-- Carte Formulaire -->
+                    <div class="contact-card contact-form-card">
+                        <div class="card-icon">
+                            <i class="fas fa-envelope-open-text"></i>
+                        </div>
+                        <h2>Envoyez-nous un message</h2>
+                        <p class="card-subtitle">Remplissez le formulaire et nous vous répondrons dans les meilleurs délais</p>
+                        
+                        <form class="modern-form" action="#" method="POST">
+                            <div class="form-group">
+                                <div class="input-icon">
+                                    <i class="fas fa-user"></i>
+                                    <input type="text" name="nom" placeholder="Votre nom complet" required>
+                                </div>
+                            </div>
+                            
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <div class="input-icon">
+                                        <i class="fas fa-envelope"></i>
+                                        <input type="email" name="email" placeholder="Votre email" required>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <div class="input-icon">
+                                        <i class="fas fa-phone-alt"></i>
+                                        <input type="tel" name="telephone" placeholder="Votre téléphone">
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="form-group">
+                                <div class="input-icon">
+                                    <i class="fas fa-tag"></i>
+                                    <select name="sujet">
+                                        <option value="">Sélectionnez un sujet</option>
+                                        <option value="commande">Information sur une commande</option>
+                                        <option value="produit">Question sur un produit</option>
+                                        <option value="livraison">Livraison</option>
+                                        <option value="autre">Autre demande</option>
+                                    </select>
+                                </div>
+                            </div>
+                            
+                            <div class="form-group">
+                                <div class="input-icon textarea-icon">
+                                    <i class="fas fa-comment-dots"></i>
+                                    <textarea name="message" rows="5" placeholder="Votre message..." required></textarea>
+                                </div>
+                            </div>
+                            
+                            <button type="submit" class="submit-btn">
+                                <span>Envoyer le message</span>
+                                <i class="fas fa-paper-plane"></i>
+                            </button>
+                        </form>
+                    </div>
+
+                    <!-- Carte Informations -->
+                    <div class="contact-card contact-info-card">
+                        <div class="card-icon">
+                            <i class="fas fa-address-card"></i>
+                        </div>
+                        <h2>Nos coordonnées</h2>
+                        <p class="card-subtitle">Plusieurs moyens de nous contacter</p>
+                        
+                        <div class="info-list">
+                            <div class="info-item">
+                                <div class="info-icon">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                </div>
+                                <div class="info-content">
+                                    <h4>Notre adresse</h4>
+                                    <p>123 Rue de la Mode, Dakar Plateau, Sénégal</p>
+                                    <a href="https://maps.google.com" target="_blank" class="info-link">Voir sur Google Maps <i class="fas fa-arrow-right"></i></a>
+                                </div>
+                            </div>
+                            
+                            <div class="info-item">
+                                <div class="info-icon">
+                                    <i class="fas fa-phone-alt"></i>
+                                </div>
+                                <div class="info-content">
+                                    <h4>Téléphone</h4>
+                                    <p><a href="tel:+221781234567">+221 78 123 45 67</a></p>
+                                    <p class="info-note">Lun-Sam : 9h-19h</p>
+                                </div>
+                            </div>
+                            
+                            <div class="info-item">
+                                <div class="info-icon">
+                                    <i class="fab fa-whatsapp"></i>
+                                </div>
+                                <div class="info-content">
+                                    <h4>WhatsApp</h4>
+                                    <p><a href="https://wa.me/221781234567" target="_blank">+221 78 123 45 67</a></p>
+                                    <p class="info-note">Réponse rapide garantie</p>
+                                </div>
+                            </div>
+                            
+                            <div class="info-item">
+                                <div class="info-icon">
+                                    <i class="fas fa-envelope"></i>
+                                </div>
+                                <div class="info-content">
+                                    <h4>Email</h4>
+                                    <p><a href="mailto:contact@boutiquemboup.sn">contact@boutiquemboup.sn</a></p>
+                                    <p class="info-note">Réponse sous 24h</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="social-section">
+                            <h4>Suivez-nous</h4>
+                            <div class="social-links-modern">
+                                <a href="#" class="social-link" aria-label="Instagram">
+                                    <i class="fab fa-instagram"></i>
+                                    <span>Instagram</span>
+                                </a>
+                                <a href="#" class="social-link" aria-label="Facebook">
+                                    <i class="fab fa-facebook-f"></i>
+                                    <span>Facebook</span>
+                                </a>
+                                <a href="#" class="social-link" aria-label="TikTok">
+                                    <i class="fab fa-tiktok"></i>
+                                    <span>TikTok</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Carte Horaires & Map -->
+                <div class="contact-bottom-grid">
+                    <div class="contact-card hours-card">
+                        <div class="card-icon-small">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <h3>Horaires d'ouverture</h3>
+                        <div class="hours-list">
+                            <div class="hour-item">
+                                <span>Lundi - Vendredi</span>
+                                <span class="hour-time">9h00 - 19h00</span>
+                            </div>
+                            <div class="hour-item">
+                                <span>Samedi</span>
+                                <span class="hour-time">9h00 - 17h00</span>
+                            </div>
+                            <div class="hour-item">
+                                <span>Dimanche</span>
+                                <span class="hour-time closed">Fermé</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-card map-card">
+                        <div class="card-icon-small">
+                            <i class="fas fa-store"></i>
+                        </div>
+                        <h3>Notre boutique</h3>
+                        <div class="map-placeholder">
+                            <div class="map-preview">
+                                <i class="fas fa-map-marker-alt"></i>
+                                <p>123 Rue de la Mode<br>Dakar Plateau, Sénégal</p>
+                                <div class="map-decoration"></div>
+                            </div>
+                        </div>
+                        <a href="https://maps.google.com" class="map-btn" target="_blank">
+                            <i class="fas fa-directions"></i> Itinéraire
+                        </a>
+                    </div>
+                </div>
+
+                <!-- FAQ Section -->
+                <div class="contact-card faq-card">
+                    <div class="faq-header">
+                        <div class="card-icon-small">
+                            <i class="fas fa-question-circle"></i>
+                        </div>
+                        <h3>Questions fréquentes</h3>
+                    </div>
+                    <div class="faq-grid">
+                        <div class="faq-item">
+                            <div class="faq-question">
+                                <i class="fas fa-truck"></i>
+                                <span>Livrez-vous dans toute l'Afrique ?</span>
+                                <i class="fas fa-chevron-down"></i>
+                            </div>
+                            <div class="faq-answer">
+                                <p>Oui, nous livrons dans tout le Sénégal et dans plusieurs pays d'Afrique de l'Ouest. Contactez-nous pour plus d'informations.</p>
+                            </div>
+                        </div>
+                        <div class="faq-item">
+                            <div class="faq-question">
+                                <i class="fas fa-credit-card"></i>
+                                <span>Quels modes de paiement acceptez-vous ?</span>
+                                <i class="fas fa-chevron-down"></i>
+                            </div>
+                            <div class="faq-answer">
+                                <p>Nous acceptons Orange Money, Wave, virement bancaire et paiement à la livraison sur Dakar.</p>
+                            </div>
+                        </div>
+                        <div class="faq-item">
+                            <div class="faq-question">
+                                <i class="fas fa-exchange-alt"></i>
+                                <span>Puis-je retourner un article ?</span>
+                                <i class="fas fa-chevron-down"></i>
+                            </div>
+                            <div class="faq-answer">
+                                <p>Oui, vous disposez de 7 jours pour retourner un article non porté avec son étiquette.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA WhatsApp Flottant -->
+        <div class="whatsapp-float">
+            <a href="https://wa.me/221781234567?text=Bonjour%2C%20je%20suis%20int%C3%A9ress%C3%A9%20par%20vos%20produits" target="_blank">
+                <i class="fab fa-whatsapp"></i>
+                <span>Chat</span>
+            </a>
+        </div>
     </main>
 
     <footer class="footer">
-        <!-- Même footer -->
         <div class="container">
             <div class="footer-grid">
                 <div class="footer-col">
@@ -113,5 +323,14 @@
     </footer>
 
     <script src="js/main.js"></script>
+    <script>
+        // FAQ Accordéon
+        document.querySelectorAll('.faq-question').forEach(question => {
+            question.addEventListener('click', () => {
+                const faqItem = question.parentElement;
+                faqItem.classList.toggle('active');
+            });
+        });
+    </script>
 </body>
 </html>
