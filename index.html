@@ -4,15 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Boutique MBOUP - Habillement Homme, Femme, Enfant à Dakar</title>
-    <meta name="description" content="Boutique d'habillement tendance à Dakar. Découvrez nos collections Homme, Femme et Enfant.">
+    <meta name="description" content="Découvrez nos collections tendance pour Homme, Femme et Enfant à Dakar. Mode africaine et internationale. WhatsApp commande.">
     
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@400;700;900&display=swap" rel="stylesheet">
 </head>
 <body>
 
-    <!-- HEADER FIXE (STICKY) -->
     <header class="header">
         <div class="container">
             <div class="logo">
@@ -21,7 +20,6 @@
                 </a>
             </div>
             
-            <!-- Checkbox pour menu mobile (sans JS) -->
             <input type="checkbox" id="menu-toggle" class="menu-checkbox">
             <label for="menu-toggle" class="menu-label">
                 <i class="fas fa-bars"></i>
@@ -33,9 +31,9 @@
                     <li class="dropdown">
                         <a href="#">Collections <i class="fas fa-chevron-down"></i></a>
                         <ul class="dropdown-menu">
-                            <li><a href="homme.html">Homme</a></li>
-                            <li><a href="femme.html">Femme</a></li>
-                            <li><a href="enfant.html">Enfant</a></li>
+                            <li><a href="collections-homme.html">Homme</a></li>
+                            <li><a href="collections-femme.html">Femme</a></li>
+                            <li><a href="collections-enfant.html">Enfant</a></li>
                         </ul>
                     </li>
                     <li><a href="a-propos.html">À propos</a></li>
@@ -46,47 +44,90 @@
     </header>
 
     <main>
-        <!-- SECTION HERO -->
+        <!-- HERO BANNER -->
         <section class="hero">
-            <div class="hero-overlay"></div>
-            <div class="container hero-content">
-                <h1>Mode & Élégance à Dakar</h1>
-                <p>Découvrez nos dernières collections pour Homme, Femme et Enfant</p>
+            <div class="hero-content">
+                <h1>Découvrez nos Collections<br>Homme, Femme & Enfant</h1>
+                <p>Mode tendance à Dakar – Qualité & Élégance</p>
                 <div class="hero-buttons">
-                    <a href="homme.html" class="btn btn-primary">Collection Homme</a>
-                    <a href="femme.html" class="btn btn-outline">Collection Femme</a>
+                    <a href="collections-homme.html" class="btn btn-primary">Collection Homme</a>
+                    <a href="collections-femme.html" class="btn btn-outline">Collection Femme</a>
                 </div>
             </div>
         </section>
-        
-        <!-- SECTION CATÉGORIES -->
+
+        <!-- 3 BLOCS VISUELS CLAIQUABLES -->
         <section class="categories">
             <div class="container">
                 <h2 class="section-title">Nos univers</h2>
                 <div class="categories-grid">
                     <div class="category-card">
-                        <img src="images/categorie-homme.jpg" alt="Homme">
+                        <img src="images/categorie-homme.jpg" alt="Collection Homme">
                         <h3>Homme</h3>
-                        <a href="homme.html" class="btn-category">Découvrir</a>
+                        <a href="collections-homme.html" class="btn-category">Découvrir</a>
                     </div>
                     <div class="category-card">
-                        <img src="images/categorie-femme.jpg" alt="Femme">
+                        <img src="images/categorie-femme.jpg" alt="Collection Femme">
                         <h3>Femme</h3>
-                        <a href="femme.html" class="btn-category">Découvrir</a>
+                        <a href="collections-femme.html" class="btn-category">Découvrir</a>
                     </div>
                     <div class="category-card">
-                        <img src="images/categorie-enfant.jpg" alt="Enfant">
+                        <img src="images/categorie-enfant.jpg" alt="Collection Enfant">
                         <h3>Enfant</h3>
-                        <a href="enfant.html" class="btn-category">Découvrir</a>
+                        <a href="collections-enfant.html" class="btn-category">Découvrir</a>
                     </div>
                 </div>
             </div>
         </section>
-        
-        <!-- SECTION WHATSAPP -->
-        <section class="cta-whatsapp">
+
+        <!-- SECTION SÉLECTION DU MOMENT -->
+        <section class="selection">
             <div class="container">
-                <h2>Une question ? Un produit vu sur notre site ?</h2>
+                <h2 class="section-title">Sélection du moment</h2>
+                <div class="products-grid">
+                    <!-- Produit Homme -->
+                    <div class="product-card">
+                        <div class="product-badge badge-new">Nouveau</div>
+                        <img src="images/selection-homme-1.jpg" alt="Chemise blanche homme">
+                        <h3>Chemise blanche</h3>
+                        <div class="product-price">25 000 FCFA</div>
+                        <p>Collection Homme 2026</p>
+                        <a href="produit-homme-chemise-blanche.html" class="product-link">Voir les détails</a>
+                    </div>
+                    <!-- Produit Femme -->
+                    <div class="product-card">
+                        <div class="product-badge badge-best">Best-seller</div>
+                        <img src="images/selection-femme-1.jpg" alt="Robe wax">
+                        <h3>Robe wax</h3>
+                        <div class="product-price">35 000 FCFA</div>
+                        <p>Collection Femme</p>
+                        <a href="produit-femme-robe-wax.html" class="product-link">Voir les détails</a>
+                    </div>
+                    <!-- Produit Enfant -->
+                    <div class="product-card">
+                        <div class="product-badge badge-promo">Promo</div>
+                        <img src="images/selection-enfant-1.jpg" alt="Ensemble enfant">
+                        <h3>Ensemble enfant</h3>
+                        <div class="product-price">15 000 FCFA</div>
+                        <p>Collection Enfant</p>
+                        <a href="produit-enfant-ensemble.html" class="product-link">Voir les détails</a>
+                    </div>
+                    <!-- Produit Mixte -->
+                    <div class="product-card">
+                        <img src="images/selection-homme-2.jpg" alt="Boubou cérémonie">
+                        <h3>Boubou cérémonie</h3>
+                        <div class="product-price">45 000 FCFA</div>
+                        <p>Collection Homme</p>
+                        <a href="produit-homme-boubou.html" class="product-link">Voir les détails</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION WHATSAPP CTA -->
+        <section class="cta-whatsapp" style="background: linear-gradient(135deg, #075e54, #128C7E); color: white; text-align: center; padding: 60px 20px;">
+            <div class="container">
+                <h2 style="color: white;">Une question ? Un produit vu sur notre site ?</h2>
                 <p>Contactez-nous directement sur WhatsApp pour connaître les prix et disponibilités</p>
                 <a href="https://wa.me/221781234567?text=Bonjour%2C%20je%20suis%20int%C3%A9ress%C3%A9%20par%20vos%20produits" 
                    class="btn-whatsapp" target="_blank">
@@ -96,7 +137,6 @@
         </section>
     </main>
 
-    <!-- FOOTER -->
     <footer class="footer">
         <div class="container">
             <div class="footer-grid">

@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Collection Homme 2026 - Boutique MBOUP Dakar</title>
+    <meta name="description" content="Découvrez notre collection Homme 2026 : chemises, jeans, boubous. Livraison à Dakar. Prix accessible.">
+    
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@400;700;900&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="images/logo.png" alt="Boutique MBOUP" class="logo-img">
+                </a>
+            </div>
+            <input type="checkbox" id="menu-toggle" class="menu-checkbox">
+            <label for="menu-toggle" class="menu-label">
+                <i class="fas fa-bars"></i>
+            </label>
+            <nav class="nav">
+                <ul class="nav-menu">
+                    <li><a href="index.html">Accueil</a></li>
+                    <li class="dropdown">
+                        <a href="#">Collections <i class="fas fa-chevron-down"></i></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="collections-homme.html">Homme</a></li>
+                            <li><a href="collections-femme.html">Femme</a></li>
+                            <li><a href="collections-enfant.html">Enfant</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="a-propos.html">À propos</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="container">
+            <h1 class="section-title">Collection Homme 2026</h1>
+            
+            <!-- FILTRES VISUELS -->
+            <div class="filters">
+                <a href="#" class="filter-link active">Tous</a>
+                <a href="#" class="filter-link">Chemises</a>
+                <a href="#" class="filter-link">Pantalons</a>
+                <a href="#" class="filter-link">Costumes</a>
+                <a href="#" class="filter-link">Boubous</a>
+                <a href="#" class="filter-link">Accessoires</a>
+            </div>
+            
+            <!-- GRILLE PRODUITS -->
+            <div class="products-grid">
+                <div class="product-card">
+                    <div class="product-badge badge-new">Nouveau</div>
+                    <img src="images/homme-chemise-blanche.jpg" alt="Chemise blanche homme">
+                    <h3>Chemise blanche</h3>
+                    <div class="product-price">25 000 FCFA</div>
+                    <p>Coton bio - Coupe slim</p>
+                    <a href="produit-homme-chemise-blanche.html" class="product-link">Voir les détails</a>
+                </div>
+                
+                <div class="product-card">
+                    <img src="images/homme-jean-slim.jpg" alt="Jean slim homme">
+                    <h3>Jean slim</h3>
+                    <div class="product-price">35 000 FCFA</div>
+                    <p>Tissu premium - Élastique</p>
+                    <a href="produit-homme-jean.html" class="product-link">Voir les détails</a>
+                </div>
+                
+                <div class="product-card">
+                    <div class="product-badge badge-best">Best-seller</div>
+                    <img src="images/homme-boubou-wax.jpg" alt="Boubou wax homme">
+                    <h3>Boubou wax</h3>
+                    <div class="product-price">55 000 FCFA</div>
+                    <p>Tissu wax - Fait main</p>
+                    <a href="produit-homme-boubou.html" class="product-link">Voir les détails</a>
+                </div>
+                
+                <div class="product-card">
+                    <div class="product-badge badge-promo">Promo</div>
+                    <img src="images/homme-costume.jpg" alt="Costume homme">
+                    <h3>Costume 3 pièces</h3>
+                    <div class="product-price">85 000 FCFA <span style="text-decoration: line-through; font-size: 0.8rem;">120 000 FCFA</span></div>
+                    <p>Laine - Coupe cintrée</p>
+                    <a href="produit-homme-costume.html" class="product-link">Voir les détails</a>
+                </div>
+                
+                <div class="product-card">
+                    <img src="images/homme-chemise-africaine.jpg" alt="Chemise africaine">
+                    <h3>Chemise africaine</h3>
+                    <div class="product-price">30 000 FCFA</div>
+                    <p>Tissu bazin - Brodé</p>
+                    <a href="produit-homme-chemise-africaine.html" class="product-link">Voir les détails</a>
+                </div>
+                
+                <div class="product-card">
+                    <img src="images/homme-polo.jpg" alt="Polo homme">
+                    <h3>Polo col</h3>
+                    <div class="product-price">20 000 FCFA</div>
+                    <p>Coton piqué - 6 couleurs</p>
+                    <a href="produit-homme-polo.html" class="product-link">Voir les détails</a>
+                </div>
+            </div>
+            
+            <!-- PAGINATION -->
+            <div class="pagination">
+                <a href="#" class="active">1</a>
+                <a href="#">2</a>
+                <a href="#">3</a>
+                <a href="#">Suivant →</a>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h4>Boutique MBOUP</h4>
+                    <p>Habillement tendance pour toute la famille à Dakar.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Contact</h4>
+                    <p><i class="fas fa-phone"></i> <a href="tel:+221781234567">+221 78 123 45 67</a></p>
+                    <p><i class="fab fa-whatsapp"></i> <a href="https://wa.me/221781234567" target="_blank">WhatsApp</a></p>
+                    <p><i class="fas fa-envelope"></i> <a href="mailto:contact@boutiquemboup.sn">contact@boutiquemboup.sn</a></p>
+                </div>
+                <div class="footer-col">
+                    <h4>Adresse</h4>
+                    <p><i class="fas fa-map-marker-alt"></i> 123 Rue de la Mode, Dakar Plateau, Sénégal</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Suivez-nous</h4>
+                    <div class="social-links">
+                        <a href="https://instagram.com/votrecompte" target="_blank"><i class="fab fa-instagram"></i></a>
+                        <a href="https://wa.me/221781234567" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                        <a href="https://facebook.com/votrepage" target="_blank"><i class="fab fa-facebook"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Boutique MBOUP - Tous droits réservés</p>
+                <p><a href="mentions-legales.html">Mentions légales</a></p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
