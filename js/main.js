@@ -1,12 +1,11 @@
 /**
- * Boutique MBOUP - Site Vitrine
- * JavaScript moderne avec animations et interactions
+ * Boutique MBOUP - Design Marron/Beige/Or
+ * Animations et interactions élégantes
  */
 
-// ===== ATTENDRE QUE LE DOM SOIT CHARGÉ =====
 document.addEventListener('DOMContentLoaded', function() {
     
-    // --- 1. LOADER ---
+    // --- LOADER ---
     const loader = document.createElement('div');
     loader.className = 'loader';
     loader.innerHTML = '<div class="spinner"></div>';
@@ -19,7 +18,7 @@ document.addEventListener('DOMContentLoaded', function() {
         }, 500);
     });
     
-    // --- 2. HEADER SCROLL EFFECT ---
+    // --- HEADER SCROLL EFFECT ---
     const header = document.querySelector('.header');
     if (header) {
         window.addEventListener('scroll', () => {
@@ -31,19 +30,25 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
     
-    // --- 3. MENU MOBILE - Fermeture automatique ---
-    const menuCheckbox = document.getElementById('menu-toggle');
-    const navLinks = document.querySelectorAll('.nav-menu a');
+    // --- BACK TO TOP BUTTON ---
+    const backToTop = document.createElement('button');
+    backToTop.className = 'back-to-top';
+    backToTop.innerHTML = '<i class="fas fa-arrow-up"></i>';
+    document.body.appendChild(backToTop);
     
-    navLinks.forEach(link => {
-        link.addEventListener('click', () => {
-            if (menuCheckbox && menuCheckbox.checked) {
-                menuCheckbox.checked = false;
-            }
-        });
+    window.addEventListener('scroll', () => {
+        if (window.scrollY > 300) {
+            backToTop.classList.add('visible');
+        } else {
+            backToTop.classList.remove('visible');
+        }
     });
     
-    // --- 4. ANIMATION AU SCROLL (Intersection Observer) ---
+    backToTop.addEventListener('click', () => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+    
+    // --- ANIMATION AU SCROLL (Intersection Observer) ---
     const observerOptions = {
         threshold: 0.1,
         rootMargin: '0px 0px -50px 0px'
@@ -58,77 +63,121 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }, observerOptions);
     
-    // Observer les cartes produits
     document.querySelectorAll('.product-card').forEach(card => {
         observer.observe(card);
     });
     
-    // Observer les cartes catégories
     document.querySelectorAll('.category-card').forEach(card => {
         observer.observe(card);
     });
     
-    // --- 5. FILTRES PRODUITS (simulation) ---
+    // --- TOAST NOTIFICATION ---
+    function showToast(message, type = 'info') {
+        const toast = document.createElement('div');
+        toast.className = 'toast-notification';
+        
+        let icon = '✨';
+        if (type === 'success') icon = '✓';
+        if (type === 'error') icon = '✗';
+        
+        toast.innerHTML = `${icon} ${message}`;
+        document.body.appendChild(toast);
+        
+        setTimeout(() => {
+            toast.style.opacity = '0';
+            toast.style.transform = 'translateX(100px)';
+            setTimeout(() => toast.remove(), 300);
+        }, 3000);
+    }
+    
+    window.showToast = showToast;
+    
+    // --- MENU MOBILE - Fermeture automatique ---
+    const menuCheckbox = document.getElementById('menu-toggle');
+    const navLinks = document.querySelectorAll('.nav-menu a');
+    
+    navLinks.forEach(link => {
+        link.addEventListener('click', () => {
+            if (menuCheckbox && menuCheckbox.checked) {
+                menuCheckbox.checked = false;
+            }
+        });
+    });
+    
+    // --- FILTRES PRODUITS ---
     const filterLinks = document.querySelectorAll('.filter-link');
     
     filterLinks.forEach(link => {
         link.addEventListener('click', (e) => {
             e.preventDefault();
-            
-            // Activer le filtre
             filterLinks.forEach(l => l.classList.remove('active'));
             link.classList.add('active');
-            
-            const filterValue = link.textContent;
-            showToast(`Filtre: ${filterValue}`, 'info');
+            showToast(`${link.textContent} sélectionné`, 'success');
         });
     });
     
-    // --- 6. GESTION DES TAILLES (page produit) ---
+    // --- GESTION DES TAILLES ---
     const sizeBtns = document.querySelectorAll('.size-btn');
     
     sizeBtns.forEach(btn => {
         btn.addEventListener('click', () => {
             sizeBtns.forEach(b => b.classList.remove('active'));
             btn.classList.add('active');
-            showToast(`Taille ${btn.textContent} sélectionnée`, 'info');
+            showToast(`Taille ${btn.textContent} sélectionnée`, 'success');
         });
     });
     
-    // --- 7. COPIE DU LIEN WHATSAPP PRÉ-REMPLI ---
-    const whatsappBtns = document.querySelectorAll('.btn-whatsapp, .product-actions .btn-whatsapp');
-    
-    whatsappBtns.forEach(btn => {
-        btn.addEventListener('click', (e) => {
-            const message = btn.getAttribute('href');
-            if (message && message.includes('wa.me')) {
-                console.log('Ouverture WhatsApp...');
-            }
-        });
-    });
-    
-    // --- 8. MODAL DE CONFIRMATION POUR COMMANDE ---
+    // --- MODAL DE CONFIRMATION ---
     const commandeBtns = document.querySelectorAll('.btn-whatsapp');
     
     commandeBtns.forEach(btn => {
         btn.addEventListener('click', (e) => {
-            if (!btn.hasAttribute('data-no-modal')) {
+            if (!btn.hasAttribute('data-no-modal') && !btn.getAttribute('href')?.includes('mailto')) {
                 e.preventDefault();
                 const href = btn.getAttribute('href');
                 
                 const modal = document.createElement('div');
                 modal.className = 'modal';
+                modal.style.cssText = `
+                    display: none;
+                    position: fixed;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    background: rgba(42, 27, 15, 0.9);
+                    z-index: 2000;
+                    justify-content: center;
+                    align-items: center;
+                `;
                 modal.innerHTML = `
-                    <div class="modal-content">
-                        <i class="fas fa-shopping-cart" style="font-size: 48px; color: #e67e22; margin-bottom: 20px;"></i>
-                        <h3>Confirmation</h3>
-                        <p>Vous allez être redirigé vers WhatsApp pour finaliser votre commande.</p>
-                        <button class="modal-close">Continuer</button>
+                    <div style="
+                        background: linear-gradient(135deg, #faf6f0, #e8d9c5);
+                        padding: 35px;
+                        border-radius: 20px;
+                        max-width: 450px;
+                        text-align: center;
+                        animation: fadeInUp 0.3s;
+                        border: 1px solid #d4af37;
+                    ">
+                        <i class="fas fa-gem" style="font-size: 48px; color: #d4af37; margin-bottom: 20px;"></i>
+                        <h3 style="color: #4a2c1a;">Confirmation</h3>
+                        <p style="color: #7a5230; margin: 15px 0;">Vous allez être redirigé vers WhatsApp pour finaliser votre commande.</p>
+                        <button class="modal-close" style="
+                            background: linear-gradient(135deg, #d4af37, #b8860b);
+                            color: #4a2c1a;
+                            border: none;
+                            padding: 12px 30px;
+                            border-radius: 50px;
+                            cursor: pointer;
+                            font-weight: 600;
+                            margin-top: 15px;
+                        ">Continuer</button>
                     </div>
                 `;
                 
                 document.body.appendChild(modal);
-                modal.classList.add('show');
+                modal.style.display = 'flex';
                 
                 const closeBtn = modal.querySelector('.modal-close');
                 closeBtn.addEventListener('click', () => {
@@ -145,7 +194,7 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
     
-    // --- 9. FORMULAIRE DE CONTACT AVEC VALIDATION ---
+    // --- FORMULAIRE CONTACT ---
     const contactForm = document.querySelector('.contact-form form');
     
     if (contactForm) {
@@ -157,112 +206,36 @@ document.addEventListener('DOMContentLoaded', function() {
             const message = contactForm.querySelector('[name="message"]')?.value;
             
             if (!name || !email || !message) {
-                showToast('Veuillez remplir tous les champs obligatoires', 'error');
+                showToast('Veuillez remplir tous les champs', 'error');
                 return;
             }
             
-            if (!email.includes('@')) {
-                showToast('Veuillez entrer un email valide', 'error');
-                return;
-            }
-            
-            // Simulation d'envoi
             const submitBtn = contactForm.querySelector('.btn-submit');
             const originalText = submitBtn.textContent;
             submitBtn.textContent = 'Envoi en cours...';
             submitBtn.disabled = true;
             
             setTimeout(() => {
-                showToast('Message envoyé avec succès ! Nous vous répondrons sous 24h.', 'success');
+                showToast('Message envoyé avec succès ! ✨', 'success');
                 contactForm.reset();
                 submitBtn.textContent = originalText;
                 submitBtn.disabled = false;
             }, 1500);
-            
-            // En réel, décommentez pour Formspree
-            // const response = await fetch(contactForm.action, {
-            //     method: 'POST',
-            //     body: new FormData(contactForm),
-            //     headers: { 'Accept': 'application/json' }
-            // });
         });
     }
     
-    // --- 10. TOAST NOTIFICATION ---
-    function showToast(message, type = 'info') {
-        const toast = document.createElement('div');
-        toast.className = 'toast-notification';
-        
-        let icon = 'ℹ️';
-        if (type === 'success') icon = '✅';
-        if (type === 'error') icon = '❌';
-        if (type === 'info') icon = 'ℹ️';
-        
-        toast.innerHTML = `${icon} ${message}`;
-        
-        if (type === 'success') toast.style.background = '#1e8449';
-        if (type === 'error') toast.style.background = '#c0392b';
-        
-        document.body.appendChild(toast);
-        
-        setTimeout(() => {
-            toast.style.opacity = '0';
-            toast.style.transform = 'translateX(100px)';
-            setTimeout(() => toast.remove(), 300);
-        }, 3000);
-    }
-    
-    // Exposer la fonction globalement
-    window.showToast = showToast;
-    
-    // --- 11. BACK TO TOP BUTTON ---
-    const backToTop = document.createElement('button');
-    backToTop.innerHTML = '<i class="fas fa-arrow-up"></i>';
-    backToTop.style.cssText = `
-        position: fixed;
-        bottom: 30px;
-        right: 30px;
-        width: 50px;
-        height: 50px;
-        background: #e67e22;
-        color: white;
-        border: none;
-        border-radius: 50%;
-        cursor: pointer;
-        opacity: 0;
-        visibility: hidden;
-        transition: all 0.3s;
-        z-index: 999;
-        box-shadow: 0 4px 15px rgba(0,0,0,0.2);
-    `;
-    document.body.appendChild(backToTop);
-    
-    window.addEventListener('scroll', () => {
-        if (window.scrollY > 300) {
-            backToTop.style.opacity = '1';
-            backToTop.style.visibility = 'visible';
-        } else {
-            backToTop.style.opacity = '0';
-            backToTop.style.visibility = 'hidden';
-        }
+    // --- SMOOTH SCROLL ---
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+            const target = document.querySelector(this.getAttribute('href'));
+            if (target) {
+                e.preventDefault();
+                target.scrollIntoView({ behavior: 'smooth' });
+            }
+        });
     });
     
-    backToTop.addEventListener('click', () => {
-        window.scrollTo({ top: 0, behavior: 'smooth' });
-    });
-    
-    // --- 12. ANIMATION SUR LE TITRE DE LA PAGE ---
-    const heroTitle = document.querySelector('.hero h1');
-    if (heroTitle) {
-        const text = heroTitle.innerHTML;
-        heroTitle.style.opacity = '0';
-        
-        setTimeout(() => {
-            heroTitle.style.opacity = '1';
-        }, 100);
-    }
-    
-    // --- 13. GESTION DES IMAGES PRODUITS (hover galerie) ---
+    // --- GALERIE PRODUIT (hover) ---
     const thumbs = document.querySelectorAll('.thumb');
     const mainImg = document.getElementById('mainProductImage');
     
@@ -274,24 +247,19 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
     
-    // --- 14. SMOOTH SCROLL POUR LIENS INTERNES ---
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function(e) {
-            const target = document.querySelector(this.getAttribute('href'));
-            if (target) {
-                e.preventDefault();
-                target.scrollIntoView({ behavior: 'smooth' });
-            }
-        });
-    });
-    
-    // --- 15. DÉTECTION DU RÉSEAU (pour info) ---
-    if ('connection' in navigator) {
-        const connection = navigator.connection;
-        if (connection.saveData) {
-            console.log('Mode économie de données actif');
-        }
+    // --- ANIMATION D'ENTRÉE POUR LE HERO ---
+    const heroTitle = document.querySelector('.hero h1');
+    if (heroTitle) {
+        heroTitle.style.opacity = '0';
+        setTimeout(() => {
+            heroTitle.style.opacity = '1';
+        }, 100);
     }
     
-    console.log('Site MBOUP chargé avec succès !');
+    console.log('✨ Boutique MBOUP - Design Marron, Beige & Or chargé ✨');
+    
+    // --- DÉCORATION DE BIENVENUE ---
+    setTimeout(() => {
+        showToast('Bienvenue chez Boutique MBOUP ✨', 'success');
+    }, 800);
 });
