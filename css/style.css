@@ -677,7 +677,7 @@ h1, h2, h3, h4, h5, h6 {
     transform: translateY(-3px);
 }
 
-/* ===== CTA WHATSAPP ===== */
+/*  CTA WHATSAPP  */
 .cta-whatsapp {
     background: linear-gradient(135deg, #4a3728, #3a2a1e);
     padding: 70px 0;
@@ -733,7 +733,7 @@ h1, h2, h3, h4, h5, h6 {
     animation: pulse 0.5s ease;
 }
 
-/* ===== FOOTER ===== */
+/*  FOOTER  */
 .footer {
     background: #2c241a;
     color: #d4c5b0;
@@ -787,8 +787,21 @@ h1, h2, h3, h4, h5, h6 {
     flex-wrap: wrap;
     gap: 15px;
 }
+.footer-bottom {
+    text-align: center;
+    padding-top: 25px;
+    border-top: 1px solid #4a3728;
+    display: flex;
+    justify-content: center;  /* Centre le conteneur */
+    flex-wrap: wrap;
+    gap: 15px;
+}
 
-/* ===== CONTACT & ABOUT ===== */
+.footer-bottom > * {
+    margin: 0 auto;  /* Centre chaque élément individuellement */
+}
+
+/*  CONTACT & ABOUT  */
 .contact-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
