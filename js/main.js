@@ -194,3 +194,40 @@ document.addEventListener('DOMContentLoaded', function() {
     
     showPage(1);
 });
+
+// ===== ANIMATIONS AU SCROLL =====
+document.addEventListener('DOMContentLoaded', function() {
+    const animateElements = document.querySelectorAll('.animate-on-scroll');
+    
+    function checkVisibility() {
+        animateElements.forEach(element => {
+            const rect = element.getBoundingClientRect();
+            const windowHeight = window.innerHeight;
+            
+            if (rect.top < windowHeight - 100) {
+                element.classList.add('visible');
+            }
+        });
+    }
+    
+    window.addEventListener('scroll', checkVisibility);
+    window.addEventListener('load', checkVisibility);
+    
+    // Initial check
+    setTimeout(checkVisibility, 100);
+});
+
+//  DROPDOWN MOBILE 
+document.addEventListener('DOMContentLoaded', function() {
+    const dropdowns = document.querySelectorAll('.dropdown');
+    
+    dropdowns.forEach(dropdown => {
+        const link = dropdown.querySelector('a');
+        link.addEventListener('click', function(e) {
+            if (window.innerWidth <= 768) {
+                e.preventDefault();
+                dropdown.classList.toggle('open');
+            }
+        });
+    });
+});
