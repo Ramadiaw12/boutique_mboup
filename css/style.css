@@ -2617,7 +2617,7 @@ h1, h2, h3, h4, h5, h6 {
     color: #d4af37;
 }
 
-/* ===== LOGO MINIMALISTE ===== */
+/* LOGO MINIMALISTE */
 .logo-minimal {
     display: flex;
     align-items: baseline;
@@ -2818,7 +2818,7 @@ h1, h2, h3, h4, h5, h6 {
 .product-price {
     font-size: 22px; /* AUGMENTÉ */
     font-weight: 700;
-    color: #ff9800; /* GARDE TA COULEUR */
+    color: #d9a82a; /* GARDE TA COULEUR */
     margin: 0 20px 5px 20px;
 }
 
@@ -2833,7 +2833,7 @@ h1, h2, h3, h4, h5, h6 {
     font-size: 15px; /* AUGMENTÉ */
     display: inline-block;
     margin: 0 20px 20px 20px;
-    color: #1a1a1a;
+    color: #d9a82a;
     font-weight: 500;
     text-decoration: none;
     transition: all 0.3s ease;
