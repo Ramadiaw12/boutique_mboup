@@ -2696,3 +2696,47 @@ h1, h2, h3, h4, h5, h6 {
         font-size: 1.4rem;
     }
 }
+
+/* Placeholder pour les images manquantes */
+.product-card img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    background: linear-gradient(135deg, #f5f5f5 25%, #e8e8e8 50%, #f5f5f5 75%);
+    background-size: 200% 100%;
+    animation: shimmer 1.5s infinite;
+    display: block;
+    border-radius: 8px 8px 0 0;
+}
+
+@keyframes shimmer {
+    0% { background-position: -200% 0; }
+    100% { background-position: 200% 0; }
+}
+
+/* Message si image absente */
+.product-card img:not([src]), 
+.product-card img[src=""],
+.product-card img[src*="undefined"] {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #999;
+    font-size: 14px;
+}
+
+.product-card img:not([src])::after,
+.product-card img[src=""]::after {
+    content: "📷 Photo à venir";
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    background: #f0f0f0;
+    color: #666;
+    font-size: 16px;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
