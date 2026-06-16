@@ -231,3 +231,74 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 });
+
+// ============================================
+// ANIMATIONS AU SCROLL - CATEGORIES
+// ============================================
+
+document.addEventListener('DOMContentLoaded', function() {
+    const animateElements = document.querySelectorAll('.animate-on-scroll');
+    
+    // Fonction pour vérifier la visibilité
+    function checkVisibility() {
+        const windowHeight = window.innerHeight;
+        
+        animateElements.forEach((element, index) => {
+            const rect = element.getBoundingClientRect();
+            const triggerPoint = windowHeight - 100;
+            
+            if (rect.top < triggerPoint) {
+                // Ajouter un délai progressif pour chaque carte
+                setTimeout(() => {
+                    element.classList.add('visible');
+                }, index * 150);
+            }
+        });
+    }
+    
+    // Vérifier au chargement
+    checkVisibility();
+    
+    // Vérifier au scroll
+    let scrollTimeout;
+    window.addEventListener('scroll', function() {
+        clearTimeout(scrollTimeout);
+        scrollTimeout = setTimeout(checkVisibility, 50);
+    });
+    
+    // Vérifier au resize
+    window.addEventListener('resize', checkVisibility);
+});
+
+// ============================================
+// ANIMATION AU SURVOL - EFFET 3D
+// ============================================
+
+document.addEventListener('DOMContentLoaded', function() {
+    const cards = document.querySelectorAll('.category-card');
+    
+    cards.forEach(card => {
+        card.addEventListener('mousemove', function(e) {
+            const rect = this.getBoundingClientRect();
+            const x = e.clientX - rect.left;
+            const y = e.clientY - rect.top;
+            
+            const centerX = rect.width / 2;
+            const centerY = rect.height / 2;
+            
+            const rotateX = ((y - centerY) / centerY) * -10;
+            const rotateY = ((x - centerX) / centerX) * 10;
+            
+            this.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) translateY(-8px)`;
+        });
+        
+        card.addEventListener('mouseleave', function() {
+            this.style.transform = 'perspective(1000px) rotateX(0) rotateY(0) translateY(0)';
+            this.style.transition = 'transform 0.5s ease';
+        });
+        
+        card.addEventListener('mouseenter', function() {
+            this.style.transition = 'none';
+        });
+    });
+});
