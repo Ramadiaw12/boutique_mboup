@@ -2951,3 +2951,135 @@ h1, h2, h3, h4, h5, h6 {
 .pagination a.active:hover {
     transform: none;
 }
+
+
+
+/* ============================================
+   AMÉLIORATION AFFICHAGE MOBILE - FEMME
+   ============================================ */
+
+/* Version mobile optimisée */
+@media (max-width: 768px) {
+    /* AGRANDIR LES CARTES SUR MOBILE */
+    .products-grid {
+        grid-template-columns: repeat(2, 1fr) !important; /* 2 colonnes */
+        gap: 12px !important;
+        padding: 15px 8px !important;
+    }
+    
+    /* AGRANDIR LES IMAGES */
+    .product-card {
+        border-radius: 10px !important;
+        overflow: hidden !important;
+        min-height: 300px !important;
+    }
+    
+    .product-card img {
+        height: 280px !important; /* Plus grand */
+        width: 100% !important;
+        object-fit: cover !important;
+        object-position: center !important;
+        display: block !important;
+    }
+    
+    /* TEXTE PLUS LISIBLE */
+    .product-card h3 {
+        font-size: 14px !important;
+        font-weight: 600 !important;
+        margin: 10px 10px 4px 10px !important;
+        white-space: nowrap !important;
+        overflow: hidden !important;
+        text-overflow: ellipsis !important;
+    }
+    
+    .product-price {
+        font-size: 15px !important;
+        font-weight: 700 !important;
+        margin: 0 10px 3px 10px !important;
+        color: #E53935 !important;
+    }
+    
+    .product-card p {
+        font-size: 11px !important;
+        color: #888 !important;
+        margin: 0 10px 8px 10px !important;
+    }
+    
+    .product-link {
+        font-size: 12px !important;
+        margin: 0 10px 12px 10px !important;
+        display: inline-block !important;
+        padding: 5px 0 !important;
+    }
+    
+    /* BADGES PLUS PETITS SUR MOBILE */
+    .product-badge {
+        font-size: 9px !important;
+        padding: 4px 10px !important;
+        top: 8px !important;
+        left: 8px !important;
+        border-radius: 15px !important;
+    }
+    
+    /* PRIX BARRÉ SUR MOBILE */
+    .product-price span {
+        font-size: 11px !important;
+    }
+}
+
+/* TRÈS PETITS MOBILES (moins de 400px) */
+@media (max-width: 480px) {
+    .products-grid {
+        gap: 10px !important;
+        padding: 10px 5px !important;
+    }
+    
+    .product-card img {
+        height: 220px !important;
+    }
+    
+    .product-card {
+        min-height: 250px !important;
+    }
+    
+    .product-card h3 {
+        font-size: 12px !important;
+        margin: 8px 8px 3px 8px !important;
+    }
+    
+    .product-price {
+        font-size: 13px !important;
+        margin: 0 8px 2px 8px !important;
+    }
+    
+    .product-card p {
+        font-size: 10px !important;
+        margin: 0 8px 6px 8px !important;
+    }
+    
+    .product-link {
+        font-size: 10px !important;
+        margin: 0 8px 10px 8px !important;
+    }
+    
+    .product-badge {
+        font-size: 8px !important;
+        padding: 3px 8px !important;
+        top: 5px !important;
+        left: 5px !important;
+    }
+}
+
+/* ============================================
+   OPTION : 1 COLONNE SUR TRÈS PETIT ÉCRAN
+   ============================================ */
+@media (max-width: 360px) {
+    .products-grid {
+        grid-template-columns: repeat(1, 1fr) !important;
+        gap: 15px !important;
+    }
+    
+    .product-card img {
+        height: 320px !important;
+    }
+}
