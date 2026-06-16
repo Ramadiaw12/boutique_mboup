@@ -89,3 +89,53 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 });
+
+
+// ===== PAGINATION POUR COLLECTION ENFANT =====
+document.addEventListener('DOMContentLoaded', function() {
+    const pageLinks = document.querySelectorAll('.page-link');
+    const pages = {
+        '1': document.getElementById('page1'),
+        '2': document.getElementById('page2'),
+        '3': document.getElementById('page3')
+    };
+    
+    // Fonction pour changer de page
+    function showPage(pageNumber) {
+        // Masquer toutes les pages
+        Object.values(pages).forEach(page => {
+            if (page) page.classList.remove('active');
+        });
+        
+        // Afficher la page sélectionnée
+        if (pages[pageNumber]) {
+            pages[pageNumber].classList.add('active');
+        }
+        
+        // Mettre à jour la classe active des liens
+        pageLinks.forEach(link => {
+            link.classList.remove('active');
+            if (link.getAttribute('data-page') == pageNumber) {
+                link.classList.add('active');
+            }
+        });
+        
+        // Scroll en haut de la page
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+    
+    // Gérer les clics sur les liens de pagination
+    pageLinks.forEach(link => {
+        link.addEventListener('click', function(e) {
+            e.preventDefault();
+            const pageNumber = this.getAttribute('data-page');
+            
+            if (pageNumber && pages[pageNumber]) {
+                showPage(pageNumber);
+            }
+        });
+    });
+    
+    // Afficher la page 1 par défaut
+    showPage('1');
+});
