@@ -2773,7 +2773,7 @@ h1, h2, h3, h4, h5, h6 {
 
 
 
-/* ===== AGRANDIR LES CADRES DES PHOTOS ===== */
+/*  AGRANDIR LES CADRES DES PHOTOS * */
 
 /* 1. Agrandir les cartes produits */
 .product-card {
@@ -2801,14 +2801,14 @@ h1, h2, h3, h4, h5, h6 {
 /* 3. AGRANDIR LA GRILLE */
 .products-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* ← AUGMENTÉ de 280px à 300px */
-    gap: 35px; /* ← AUGMENTÉ l'espace entre les cartes */
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /*  AUGMENTÉ de 280px à 300px */
+    gap: 35px; /*  AUGMENTÉ l'espace entre les cartes */
     padding: 30px 0;
 }
 
 /* 4. AGRANDIR LE TEXTE (optionnel) */
 .product-card h3 {
-    font-size: 20px; /* ← AUGMENTÉ */
+    font-size: 20px; /* AUGMENTÉ */
     font-weight: 600;
     color: #1a1a1a;
     margin: 15px 20px 8px 20px;
@@ -2816,21 +2816,21 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .product-price {
-    font-size: 22px; /* ← AUGMENTÉ */
+    font-size: 22px; /* AUGMENTÉ */
     font-weight: 700;
-    color: #E53935; /* ← GARDE TA COULEUR */
+    color: #ff9800; /* GARDE TA COULEUR */
     margin: 0 20px 5px 20px;
 }
 
 .product-card p {
-    font-size: 15px; /* ← AUGMENTÉ */
+    font-size: 15px; /* AUGMENTÉ */
     color: #888;
     margin: 0 20px 12px 20px;
     padding: 0;
 }
 
 .product-link {
-    font-size: 15px; /* ← AUGMENTÉ */
+    font-size: 15px; /* AUGMENTÉ */
     display: inline-block;
     margin: 0 20px 20px 20px;
     color: #1a1a1a;
@@ -2841,7 +2841,7 @@ h1, h2, h3, h4, h5, h6 {
     border-bottom: 2px solid transparent;
 }
 
-/* ===== RESPONSIVE (pour les écrans plus petits) ===== */
+/* RESPONSIVE   */
 
 /* Tablettes */
 @media (max-width: 992px) {
