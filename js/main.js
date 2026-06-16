@@ -139,3 +139,86 @@ document.addEventListener('DOMContentLoaded', function() {
     // Afficher la page 1 par défaut
     showPage('1');
 });
+
+
+// ===== PAGINATION POUR COLLECTION HOMME =====
+document.addEventListener('DOMContentLoaded', function() {
+    // Récupérer toutes les pages
+    const pages = {
+        '1': document.getElementById('page1'),
+        '2': document.getElementById('page2'),
+        '3': document.getElementById('page3')
+    };
+    
+    // Récupérer tous les liens de pagination
+    const pageLinks = document.querySelectorAll('.page-link');
+    let currentPage = 1;
+    const totalPages = 3;
+    
+    // Fonction pour afficher une page
+    function showPage(pageNumber) {
+        // Vérifier que la page existe
+        if (!pages[pageNumber]) return;
+        
+        // Masquer toutes les pages
+        Object.values(pages).forEach(page => {
+            if (page) page.classList.remove('active');
+        });
+        
+        // Afficher la page sélectionnée
+        pages[pageNumber].classList.add('active');
+        currentPage = pageNumber;
+        
+        // Mettre à jour la classe active des liens
+        pageLinks.forEach(link => {
+            link.classList.remove('active');
+            const page = link.getAttribute('data-page');
+            
+            // Si c'est un numéro de page
+            if (page === String(pageNumber)) {
+                link.classList.add('active');
+            }
+            
+            // Gérer les flèches (elles n'ont pas de classe active)
+            if (page === 'prev' || page === 'next') {
+                link.classList.remove('active');
+            }
+        });
+        
+        // Scroll en haut de la page
+        const productsSection = document.querySelector('.products-page') || document.querySelector('main');
+        if (productsSection) {
+            productsSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+    }
+    
+    // Gérer les clics sur les liens de pagination
+    pageLinks.forEach(link => {
+        link.addEventListener('click', function(e) {
+            e.preventDefault();
+            
+            const action = this.getAttribute('data-page');
+            
+            if (action === 'prev') {
+                // Page précédente
+                if (currentPage > 1) {
+                    showPage(currentPage - 1);
+                }
+            } else if (action === 'next') {
+                // Page suivante
+                if (currentPage < totalPages) {
+                    showPage(currentPage + 1);
+                }
+            } else {
+                // Page spécifique (1, 2, 3)
+                const pageNumber = parseInt(action);
+                if (pageNumber >= 1 && pageNumber <= totalPages) {
+                    showPage(pageNumber);
+                }
+            }
+        });
+    });
+    
+    // Afficher la page 1 par défaut
+    showPage(1);
+});
